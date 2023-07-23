@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  *print_int - Function to print an integer.
  *
  *@K: A va_list containing the arguments
