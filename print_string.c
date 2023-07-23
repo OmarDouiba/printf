@@ -1,13 +1,13 @@
 #include "main.h"
 
-/*
- *print_string - Prints a string to the standard output.
+/**
+ * print_string - Prints a string to the standard output.
  *
  *@str: A va_list containing the arguments
  *needed for the function.
  *
  *Return: lenght of string.
- **/
+ */
 
 int print_string(va_list str)
 {
