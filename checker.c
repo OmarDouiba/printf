@@ -2,9 +2,9 @@
 
 /**
  *checker - Function that check the format
- * 
+ *
  *@c: The character to be checked for its format.
- * 
+ *
  *Return: Function Pointer.
  */
 int (*checker(char c))(va_list)
