@@ -3,7 +3,7 @@
 /**
  *print_int - Function to print an integer.
  *
- *@K: A va_list containing the arguments
+ *@k: A va_list containing the arguments
  *needed for the function.
  *
  *Return: Integer, representing the number
