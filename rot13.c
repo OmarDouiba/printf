@@ -27,8 +27,8 @@ int rot13(va_list arg)
 				_putchar(str[i]);
 				break;
 			}
-			if (!str1[j])
-				_putchar(s[i]);
+			if (!str[j])
+				_putchar(str[i]);
 			j++;
 		}
 		i++;
