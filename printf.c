@@ -42,8 +42,7 @@ int _printf(const char *format, ...)
 				j++;
 			}
 			if (op[j].ch == NULL)
-				count += 1;
-			_putchar('%');
+				count += 1,_putchar('%');
 		}
 		i++;
 	}
