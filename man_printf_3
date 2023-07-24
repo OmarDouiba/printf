@@ -1,0 +1,10 @@
+This the man page of Printf()
+
+prototype:
+	int printf(const char *format, ..);
+
+Return:
+	the lenght of the printed characters and numbers.
+
+Function:
+	print formatted string and numbers....
