@@ -24,6 +24,7 @@ typedef struct func
 } func;
 
 int _printf(const char *format, ...);
+int check(const char *, va_list);
 int _putchar(char);
 int print_char(va_list);
 int print_int(va_list);
