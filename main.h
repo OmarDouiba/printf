@@ -36,7 +36,7 @@ int print_int(va_list);
 int print_string(va_list);
 int rot13(va_list);
 int rev_string(va_list);
-
+int print_per(va_list);
 /*Support the function print_int*/
 void print_num(long int);
 

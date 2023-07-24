@@ -20,36 +20,27 @@ int _printf(const char *format, ...)
 	va_start(arg, format);
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
+		if (format[i] != '%')
 		{
-			if (format[i + 1] == '%')
-			{
-				_putchar('%');
-				printed_char++;
-			}
-			else
-			{
-				f = checker(format[i + 1]);
-				if (f != NULL)
-				{
-					ret = f(arg);
-					va_arg(arg, int);
-					printed_char += ret;
-				}
-				else
-				{
-					_putchar(format[i]);
-					printed_char++;
-				}
-			}
-			i = i + 2;
-			continue;
+			_putchar(format[i]); printed_char++;
 		}
 		else
 		{
-			_putchar(format[i]);
-			printed_char++;
+			f = checker(format[i + 1]);
+			if (f != NULL)
+			{
+		 			ret = f(arg);
+		 			va_arg(arg, int);
+		 			printed_char += ret;
+		 	}
+		 	else
+		 	{
+		 		_putchar(format[i]);
+				printed_char++;
+	 		}
 		}
+		i = i + 2;
+		continue;
 		i++;
 	}
 	va_end(arg);

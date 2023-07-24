@@ -18,6 +18,7 @@ int (*checker(char c))(va_list)
 		{'s', print_string},
 		{'R', rot13},
 		{'r', rev_string},
+		{'%', print_per}
 		{'\0', NULL}
 	};
 
