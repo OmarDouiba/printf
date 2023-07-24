@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  *print_per - Function that prints percent char.
