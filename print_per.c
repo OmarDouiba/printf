@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *perc_func - Function that prints percent char.
+ *print_per - Function that prints percent char.
  *@per: character passed into function
  *Return: Number of characters
  */

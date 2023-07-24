@@ -1,27 +1,30 @@
 #include "main.h"
 
 /**
- * print_string - Prints a string to the standard output.
+ *print_string - function print strings
+ *@args: string
  *
- *@str: A va_list containing the arguments
- *needed for the function.
- *
- *Return: lenght of string.
+ *Return: Lenght
  */
 
-int print_string(va_list str)
+int print_string(va_list args)
 {
-	int i = 0;
-	char *s = va_arg(str, char *);
+	int i;
+	char *str;
 
-	if (s == NULL)
+	str = va_arg(args, char *);
+	if (str == NULL)
 	{
-		s = "(null)";
+		str = "(null)";
 	}
-	while (s[i] != '\0')
+
+	i = 0;
+
+	while (str[i] != '\0')
 	{
-		_putchar(s[i]);
+		_putchar(str[i]);
 		i++;
 	}
+
 	return (i);
 }

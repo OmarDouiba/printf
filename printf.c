@@ -9,40 +9,45 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, ret, printed_char = 0;
-	int (*f)(va_list);
+	va_list args;
+	int i = 0, j, holder_c = 0, count = 0;
 
-	va_list arg;
-
+	func op[] = {
+	{"c", print_char},
+	{"i", print_int},
+	{"d", print_int},
+	{"s", print_string},
+	{"%", print_per},
+	{"R", rot13},
+	{"r", rev_string},
+	{NULL, NULL}};
+	va_start(args, format);
 	if ((!format || (format[0] == '%' && !format[1])) ||
 		(format[0] == '%' && format[1] == ' ' && !format[2]))
 		return (-1);
-	va_start(arg, format);
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
-		{
-			_putchar(format[i]); printed_char++;
-		}
+			_putchar(format[i]), holder_c++;
 		else
 		{
-			f = checker(format[i + 1]);
-			if (f != NULL)
+			j = 0;
+			while (op[j].ch)
 			{
-		 			ret = f(arg);
-		 			va_arg(arg, int);
-		 			printed_char += ret;
-		 	}
-		 	else
-		 	{
-		 		_putchar(format[i]);
-				printed_char++;
-	 		}
+				if (format[i + 1] == *op[j].ch)
+				{
+					count += (op[j].f)(args), i++;
+					break;
+				}
+				j++;
+			}
+			if (op[j].ch == NULL)
+				count += 1;
+			_putchar('%');
 		}
-		i = i + 2;
-		continue;
 		i++;
 	}
-	va_end(arg);
-	return (printed_char);
-}
+	holder_c += count;
+	va_end(args);
+	return (holder_c);
+	}
