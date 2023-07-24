@@ -36,11 +36,9 @@ int _printf(const char *format, ...)
 					va_arg(arg, int);
 					printed_char += ret;
 				}
-				else if (format[i + 1]
 				else
 				{
 					_putchar(format[i]);
-					_putchar(format[i + 1]);
 					printed_char++;
 				}
 			}
