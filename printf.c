@@ -31,11 +31,17 @@ int _printf(const char *format, ...)
 			else
 			{
 				f = checker(format[i + 1]);
-				if (f == NULL)
-					return (-1);
-				ret = f(arg);
-				va_arg(arg, int);
-				printed_char += ret;
+				if (f != NULL)
+				{
+					ret = f(arg);
+					va_arg(arg, int);
+					printed_char += ret;
+				}
+				else
+				{
+					_putchar(format[i];
+					printed_char++;
+				}
 			}
 			i = i + 2;
 			continue;

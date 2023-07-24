@@ -5,9 +5,9 @@
  *to the standard output.
  *@n: The long long integer to be printed.
  */
-void print_num(long long int n)
+void print_num(long int n)
 {
-	unsigned long long int num = n;
+	unsigned long int num = n;
 
 	if (n < 0)
 	{

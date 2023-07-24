@@ -12,9 +12,13 @@
 int print_int(va_list k)
 {
 	int i = 0;
-	long long int n = va_arg(k, int), numb;
+	long int n = va_arg(k, int), numb;
 
 	numb = n;
+	if (numb <= 0)
+	{
+		i++;
+	}
 	while (numb)
 	{
 		numb /= 10;

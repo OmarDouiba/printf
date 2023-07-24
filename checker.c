@@ -16,10 +16,10 @@ int (*checker(char c))(va_list)
 		{'i', print_int},
 		{'d', print_int},
 		{'s', print_string},
-		{NULL, NULL}
+		{'\0', NULL}
 	};
 
-	while (op[i].ch != NULL)
+	while (op[i].ch != '\0')
 	{
 		if (op[i].ch == c)
 		{
