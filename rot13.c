@@ -10,9 +10,9 @@ int rot13(va_list arg)
 	int i = 0, j;
 	char re[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char wi[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *str;
 
-	char *str = va_arg(arg, char *);
-
+	str = va_arg(arg, char *);
 	if (str == NULL)
 		str = "(null)";
 
