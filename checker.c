@@ -16,6 +16,7 @@ int (*checker(char c))(va_list)
 		{'i', print_int},
 		{'d', print_int},
 		{'s', print_string},
+		{'R', rot13},
 		{'\0', NULL}
 	};
 

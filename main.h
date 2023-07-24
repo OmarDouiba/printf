@@ -34,6 +34,7 @@ int _putchar(char);
 int print_char(va_list);
 int print_int(va_list);
 int print_string(va_list);
+int rot13(va_list);
 
 /*Support the function print_int*/
 void print_num(long int);
