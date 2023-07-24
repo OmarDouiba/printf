@@ -19,7 +19,7 @@
  */
 typedef struct func
 {
-	char *ch;
+	char ch;
 	int (*f)(va_list);
 } func;
 
