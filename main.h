@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 /**
  * struct func - A custom data structure to represent
