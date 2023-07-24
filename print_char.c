@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  *print_char - Function to print a single character.
